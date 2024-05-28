@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
+import taskRoute from "./routes/taskRoutes.js";
 
 // Load environment variables from a .env file into process.env
 dotenv.config();
@@ -30,7 +31,7 @@ app.listen(3000, () => {
   console.log("Server is running on PORT 3000!!!"); // Log a message when the server starts listening on port 3000
 });
 
-
+app.use("/api/task", taskRoute);
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
