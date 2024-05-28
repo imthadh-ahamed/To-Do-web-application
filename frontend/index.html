@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="stat">
+                <h2>Tasks</h2>
+                <p id="total-tasks">00</p>
+            </div>
+            <div class="stat">
+                <h2>Pending Tasks</h2>
+                <p id="pending-tasks">00</p>
+            </div>
+            <div class="stat">
+                <h2>Completed Tasks</h2>
+                <p id="completed-tasks">00</p>
+            </div>
+        </div>
+        <div class="search-sort">
+            <input type="text" id="search-bar" placeholder="Search">
+            <button id="sort-button">Sort</button>
+            <button id="add-task-button">Add Task</button>
+        </div>
+        <div id="task-list" class="task-list"></div>
+        <div id="task-form" class="task-form hidden">
+            <input type="text" id="task-title" placeholder="Title">
+            <textarea id="task-description" placeholder="Description"></textarea>
+            <button id="save-task-button">Save Task</button>
+            <button id="cancel-task-button">Cancel</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
